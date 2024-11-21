@@ -2,26 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;}
+
+/* For the entire scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* For the track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #000000; /* Scrollbar track color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* For the scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background-color: #004cff; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded thumb */
+  border: 2px solid #000000; /* Optional: gives padding to the thumb */
+}
+
+/* Optional: Change thumb color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0077ff; /* Darker color when hovering */
 }
